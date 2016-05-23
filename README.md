@@ -1,6 +1,6 @@
 # Drupal 8 - REST Webservice
 
-## Prérequis :
+## Requirements :
   - rest => core
   - hal => core
   - serialization => core
@@ -11,13 +11,13 @@
   - http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/
   - https://drupalize.me/blog/201401/introduction-restful-web-services-drupal-8
 
-### Etape 1 :
-Créer un module avec la structure suivante :
+### Step 1 :
+Create a module with the following structure:
   - mymodule.info.yml
   - src\Plugin\rest\resources\MyServiceResource.php
 
-### Etape 2 :
-Dans la class MyServiceResource :
+### Step 2 :
+In the MyServiceResource class :
 
 #### Namespace :
 ```php
@@ -37,7 +37,7 @@ use Psr\Log\LoggerInterface;
 
 #### Annotations :
 
->!IMPORTANT! : Cette notation est obligatoire pour déclarer la route du service REST.
+>!IMPORTANT! : This annotation is mandatory to declare the REST Webservice routeCette notation est obligatoire pour déclarer la route du service REST.
 
 ```php
 /**
@@ -140,4 +140,3 @@ class MenuTreeResource extends ResourceBase {
    throw new HttpException(t('Menu name wasn\'t provided'));
  }
 ```
-
